@@ -1,20 +1,9 @@
-interface Post {
-  id: number;
-  title: string;
-  content: string;
-  status: string;
-  createdAt: Date;
-}
-
-interface WorkflowStep {
-  name: string;
-  execute: () => Promise<any>;
-}
+import { Post, WorkflowStep } from "./types";
 
 class PostWorkflow {
   private steps: WorkflowStep[] = [];
 
-  addStep(name: string, execute: () => Promise<any>) {
+  addStep(name: string, execute: () => Promise<unknown>) {
     this.steps.push({ name, execute });
     return this;
   }
