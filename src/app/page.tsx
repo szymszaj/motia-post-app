@@ -15,7 +15,7 @@ export default async function Home() {
 
         <div className="text-gray-900 rounded-lg shadow-md p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Utwórz nowy post</h2>
-          <form action={createPost} className="space-y-4">
+          <form action={async (formData) => { await createPost(formData); }} className="space-y-4">
             <div>
               <label
                 htmlFor="title"
