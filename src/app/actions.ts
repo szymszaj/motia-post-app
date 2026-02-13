@@ -17,7 +17,6 @@ export async function createPost(formData: FormData) {
 
   revalidatePath("/");
 
-  // Trigger background jobs (Motia workflow)
   await fetch("http://localhost:3000/api/workflows/post", {
     method: "POST",
     headers: { "content-type": "application/json" },
