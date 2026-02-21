@@ -1,10 +1,6 @@
-export type Post = {
-  id: number;
-  title: string;
-  content: string;
-  status: string;
-  createdAt: Date;
-};
+import { Post as PrismaPost } from "@prisma/client";
+
+export type Post = PrismaPost;
 
 export type WorkflowStep = {
   name: string;
