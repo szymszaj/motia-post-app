@@ -17,6 +17,7 @@ model Post {
   id        Int      @id @default(autoincrement())
   title     String
   content   String
-  status    String   @default("Processing")
+  status    String   @default("Processing") // Processing | Completed | Failed
   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
